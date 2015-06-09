@@ -3,7 +3,5 @@
 # ~~~~
 
 # Home page
-GET     /                           controllers.Application.index
+GET     /:symbol/marketcap/:date            controllers.MarketCapControllerImpl.get(symbol,date)
 
-# Map static resources from the /public folder to the /assets URL path
-GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
